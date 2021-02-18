@@ -64,14 +64,17 @@ func Add1(advert Advert) {
 	}
 }
 
-func main() {
-
+func init() {
 	var err error
 	db, err = sql.Open("mysql", "root:4605421QWqw@/avito?parseTime=true")
 
 	if err != nil {
 		log.Println(err)
 	}
+
+}
+
+func main() {
 
 	SelectAll()
 
